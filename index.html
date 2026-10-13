@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio · Data Analyst / BI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F7;--surface:#fff;--ink:#14213D;--muted:#55627A;--line:#D5DBE3;--accent:#2F5BEA;--accent2:#1F9D8B;--accent-soft:#E4EBFD;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1626;--surface:#16213A;--ink:#EAF0FB;--muted:#9AA8C2;--line:#27355A;--accent:#7C9CFF;--accent2:#4FD1BC;--accent-soft:#1F2D55}}
+:root[data-theme="dark"]{--bg:#0E1626;--surface:#16213A;--ink:#EAF0FB;--muted:#9AA8C2;--line:#27355A;--accent:#7C9CFF;--accent2:#4FD1BC;--accent-soft:#1F2D55}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:20px;flex-wrap:wrap;padding:20px 0;font-size:15px;color:var(--muted)}
+nav a{text-decoration:none}nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end;padding:56px 0 72px}
+.hero h1{font-size:clamp(40px,7vw,72px);font-weight:800;letter-spacing:-.03em}
+.hero p{max-width:52ch;color:var(--muted);font-size:18px;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:500;border:1.5px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.chart{display:flex;align-items:flex-end;gap:10px;height:220px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.chart i{flex:1;background:var(--accent);border-radius:4px 4px 0 0;display:block;transform-origin:bottom;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.chart i:nth-child(even){background:var(--accent2)}
+.chart i:nth-child(1){height:35%}.chart i:nth-child(2){height:55%;animation-delay:.08s}.chart i:nth-child(3){height:45%;animation-delay:.16s}.chart i:nth-child(4){height:75%;animation-delay:.24s}.chart i:nth-child(5){height:62%;animation-delay:.32s}.chart i:nth-child(6){height:92%;animation-delay:.4s}
+@keyframes grow{from{transform:scaleY(0)}}
+@media (prefers-reduced-motion:reduce){.chart i{animation:none}html{scroll-behavior:auto}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:34px;font-weight:700;margin-bottom:32px;letter-spacing:-.02em}
+.job{display:grid;grid-template-columns:150px 1fr;gap:24px}
+.job .when{color:var(--muted);font-size:15px}
+.job h3{font-size:22px}
+.job .sub{color:var(--accent);font-weight:500;margin:4px 0 14px}
+ul{margin:0;padding-left:20px}li{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{margin:0 0 16px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.tags li{margin:0;padding:4px 10px;border-radius:99px;background:var(--accent-soft);font-size:14px}
+.skill{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:20px}
+.skill:nth-child(even){border-left-color:var(--accent2)}
+.skill h3{font-size:18px;margin-bottom:12px}
+.edu{list-style:none;padding:0}
+.edu li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--line);margin:0}
+.edu span{color:var(--muted);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.cols h3{font-size:18px;margin-bottom:10px}
+footer{padding:48px 0 64px;border-top:1px solid var(--line)}
+footer h2{font-size:34px;margin-bottom:12px}
+footer p{color:var(--muted);max-width:52ch}
+@media (max-width:720px){.hero{grid-template-columns:1fr;padding-top:32px}.job,.edu li{grid-template-columns:1fr;gap:4px}.chart{height:140px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Navigation"><a href="#parcours">Expérience</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#formation">Formation</a><a href="#contact">Contact</a></nav>
+<header class="hero">
+<div>
+<h1>Étudiante en Data Management, en route vers la BI.</h1>
+<p>Master Data Management à ECE Paris. Rigoureuse et curieuse, je cherche un stage de fin d'études en Data Analyst / BI pour contribuer à des projets d'analyse et de pilotage de la performance.</p>
+<div class="btns"><a class="btn main" href="#contact">Me contacter</a><a class="btn" href="#projets">Voir mes projets</a></div>
+</div>
+<div class="chart" role="img" aria-label="Illustration : graphique en barres croissant"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+</div>
+
+<section id="parcours"><div class="wrap">
+<h2>Expérience</h2>
+<div class="job">
+<div class="when">2025<br>2 mois</div>
+<div>
+<h3>Stagiaire Data Analyst · CBI</h3>
+<div class="sub">Système de pointage et reporting RH</div>
+<ul>
+<li>Analyse des besoins RH et structuration des données pour fiabiliser le suivi des présences.</li>
+<li>Nettoyage et préparation des données avec SQL Server et Power Query.</li>
+<li>Création de mesures DAX pour calculer les heures de présence et produire des indicateurs RH.</li>
+<li>Tableau de bord Power BI interactif : présences, absences et écarts entre sites.</li>
+<li>Étude des mécanismes de sécurité des données : RLS, OLS et DLP.</li>
+</ul>
+</div></div>
+</div></section>
+
+<section id="projets"><div class="wrap">
+<h2>Projets académiques</h2>
+<div class="grid">
+<article class="card"><h3>Migration des étudiants</h3><p>Préparation et transformation des données avec Talend et MySQL, puis analyse et visualisation sous Power BI pour faciliter la prise de décision.</p><ul class="tags"><li>Power BI</li><li>Excel</li><li>Talend</li><li>MySQL</li></ul></article>
+<article class="card"><h3>Réservations du train Al Boraq</h3><p>Conception d'une application web de réservation, modélisation de la base de données et gestion de l'intégrité des informations.</p><ul class="tags"><li>Jakarta EE</li><li>MySQL</li><li>MVC</li></ul></article>
+<article class="card"><h3>Reconnaissance faciale</h3><p>Développement d'un système de reconnaissance faciale avec un modèle SVM, avec un travail sur la fiabilité et la rapidité du traitement.</p><ul class="tags"><li>Python</li><li>SVM</li></ul></article>
+</div>
+</div></section>
+
+<section id="competences"><div class="wrap">
+<h2>Compétences</h2>
+<div class="grid">
+<div class="skill"><h3>Analyse de données &amp; BI</h3><ul class="tags"><li>Power BI</li><li>DAX</li><li>Excel</li><li>Visualisation</li><li>Reporting décisionnel</li></ul></div>
+<div class="skill"><h3>Bases de données &amp; SQL</h3><ul class="tags"><li>SQL</li><li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>pgAdmin</li></ul></div>
+<div class="skill"><h3>ETL &amp; Data Warehousing</h3><ul class="tags"><li>Talend</li><li>Power Query</li><li>ETL</li><li>Data Warehousing</li><li>Nettoyage et structuration</li></ul></div>
+<div class="skill"><h3>Programmation</h3><ul class="tags"><li>Python</li><li>R</li><li>Java</li><li>C</li><li>MATLAB</li><li>Jakarta EE</li></ul></div>
+<div class="skill"><h3>Outils &amp; gestion de projet</h3><ul class="tags"><li>Git</li><li>Docker (débutant)</li><li>Jira</li><li>ProjectLibre</li><li>LaTeX</li><li>Outils Microsoft</li></ul></div>
+<div class="skill"><h3>Compétences transversales</h3><ul class="tags"><li>Esprit analytique et rigoureux</li><li>Communication claire des résultats</li><li>Travail en équipe</li><li>Adaptabilité</li></ul></div>
+</div>
+</div></section>
+
+<section id="formation"><div class="wrap">
+<h2>Formation</h2>
+<ul class="edu">
+<li><span>2025–2027</span><div><strong>Master Data Management</strong> · ECE Paris</div></li>
+<li><span>2024–2025</span><div><strong>Licence Sciences des Données et Informatique Décisionnelle</strong> · FST Mohammedia</div></li>
+<li><span>2022–2024</span><div><strong>DEUST Mathématiques, Informatique et Physique</strong> · FST Mohammedia</div></li>
+<li><span>2022–2024</span><div><strong>Baccalauréat Physique Chimie Français</strong> · Lycée Abdelkhalek Torres</div></li>
+</ul>
+<div class="cols" style="margin-top:40px">
+<div><h3>Langues</h3><ul class="tags"><li>Arabe (langue maternelle)</li><li>Français (courant)</li><li>Anglais (intermédiaire)</li></ul></div>
+<div><h3>Centres d'intérêt</h3><ul class="tags"><li>Théâtre</li><li>Veille technologique</li><li>Résolution d'énigmes</li><li>Voyage</li></ul></div>
+</div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+<h2>Un stage de fin d'études à pourvoir ?</h2>
+<p>Je cherche un poste de Data Analyst / BI. Écrivez-moi, je réponds rapidement.</p>
+<div class="btns" style="margin-top:20px"><a class="btn main" href="mailto:bizarankenza05@gmail.com">votre.email@exemple.com</a><a class="btn" href="https://www.linkedin.com/in/votre-profil" rel="noopener">LinkedIn</a></div>
+</div></footer>
+</body>
+</html>
